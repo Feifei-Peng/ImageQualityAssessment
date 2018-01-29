@@ -1,0 +1,9 @@
+Path='6.jpeg';
+imshow(imread(Path));
+A=Spatial_distribution_edges(Path);
+B=blurQualityAssesment(Path);
+C=LowFeatureQualityAssesment(Path);
+D=ColorPalleteAssesment(Path);
+E=Hue_count(Path);
+Rating=((20-E)/10)+(D*2)+(C/262)*2+(B*2)+(A*2);
+Rating
